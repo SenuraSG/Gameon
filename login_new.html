@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="login_new.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="icon" href="logo.png">
+
+  </head>
+  <body>
+
+
+  <a href="index.html" class="logo"><img src="logoo.png" alt="logo" width="16%" height="16%" ></a>
+  
+    <div id="particles-js"></div>
+  <div class="container">
+
+    <div class="container">
+      <div class="left-section">
+        <div class="overlay">
+          <h2>2D GAMES</h2>
+          <p class="txt">We’d love to hear from you!</p>
+          <p class="subtext">Your thoughts and experiences matter a lot to us. Whether it’s a suggestion, a question, or just a quick note, your feedback helps us grow and serve you better. Please take a moment to share what’s on your mind — we’re all ears and always ready to improve.</p>
+        </div>
+      </div>
+      <div class="right-section">
+        <form action="" method="post">
+          <h1>Thought Share</h1>
+          <div class="input1">
+          <input type="text" placeholder="Full Name" required />
+        </div>
+        <div class="input1">
+          <input type="email" placeholder="E-mail" required />
+        </div>
+
+          <div class="input1">
+          <textarea name="txt1" id="" placeholder="Thoughts From you"></textarea>
+          </div>
+
+        <button type="submit" class="btn">S U B M I T</button>
+        
+        <button type="reset" class="btn">C L E A R</button>
+        
+      </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 70,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.3,
+        "random": true
+      },
+      "size": {
+        "value": 4,
+        "random": true
+      },
+      "move": {
+        "enable": true,
+        "speed": 1.5
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        }
+      },
+      "modes": {
+        "repulse": {
+          "distance": 80,
+          "duration": 0.4
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameOn-Hangman</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="hangman.css" />
+    <link rel="icon" href="logo.png">
+  </head>
+  <body>
+    
+    <nav class="navbar">
+            <a href="index.html" class="logo"><img src="logoo.png" alt="logo" height="16%" width="16%" ></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About_new.html">About us</a></li>
+                <li  class="active"><a href="#">Games</a></li>
+                <li><a href="login_new.html">Feedback</a></li>
+            </ul>
+            <img src="menu.png" alt="" class="menu-btn">
+        </nav>
+        <div id="particles-js"></div>
+
+    <div class="container">
+      <div id="options-container"></div>
+      <div id="letter-container" class="letter-container hide"></div>
+      <div id="user-input-section"></div>
+      <canvas id="canvas"></canvas>
+      <div id="new-game-container" class="new-game-popup hide">
+        <div id="result-text"></div>
+        <button id="new-game-button">New Game</button>
+      </div>
+    </div>
+    
+    <script src="hangman.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 70,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.3,
+        "random": true
+      },
+      "size": {
+        "value": 4,
+        "random": true
+      },
+      "move": {
+        "enable": true,
+        "speed": 1.5
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        }
+      },
+      "modes": {
+        "repulse": {
+          "distance": 80,
+          "duration": 0.4
+        }
+      }
+    },
+    "retina_detect": true
+  });
+  const menubtn = document.querySelector('.menu-btn');
+      const navlinks = document.querySelector('.nav-links');
+
+      menubtn.addEventListener('click',()=>{
+            navlinks.classList.toggle('mobile-menu');
+      });
+
+
+</script>
+  </body>
+</html>

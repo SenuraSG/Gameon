@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GameOn-Tic Tac Toe</title>
+    <link rel="stylesheet" href="tic-tac-toe.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+
+    <nav class="navbar">
+            <a href="index.html" class="logo"><img src="logoo.png" alt="logo" width="16%" height="16%" ></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About_new.html">About us</a></li>
+                <li class="active"><a href="#">Games</a></li>
+                <li><a href="login_new.html">Feedback</a></li>
+            </ul>
+            <img src="menu.png" alt="" class="menu-btn">
+        </nav>
+
+        <div id="particles-js"></div>
+
+    <section>
+        <h1 class="game--title">Tic Tac Toe</h1>
+        <div class="game--container">
+            <div data-cell-index="0" class="cell"></div>
+            <div data-cell-index="1" class="cell"></div>
+            <div data-cell-index="2" class="cell"></div>
+            <div data-cell-index="3" class="cell"></div>
+            <div data-cell-index="4" class="cell"></div>
+            <div data-cell-index="5" class="cell"></div>
+            <div data-cell-index="6" class="cell"></div>
+            <div data-cell-index="7" class="cell"></div>
+            <div data-cell-index="8" class="cell"></div>
+        </div>
+        <h3 class="game--status"></h3>
+        <button class="game--restart">Restart Game</button>
+    </section>
+<script src="tic-tac-toe.js"></script>
+<!-- Particles.js library -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 70,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.3,
+        "random": true
+      },
+      "size": {
+        "value": 4,
+        "random": true
+      },
+      "move": {
+        "enable": true,
+        "speed": 1.5
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        }
+      },
+      "modes": {
+        "repulse": {
+          "distance": 80,
+          "duration": 0.4
+        }
+      }
+    },
+    "retina_detect": true
+  });
+
+     const menubtn = document.querySelector('.menu-btn');
+      const navlinks = document.querySelector('.nav-links');
+
+      menubtn.addEventListener('click',()=>{
+            navlinks.classList.toggle('mobile-menu');
+      });
+
+
+
+</script>
+</body>
+</html>

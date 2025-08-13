@@ -1,0 +1,389 @@
+
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Poppins,sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background: #100024;
+  justify-content: center;
+  background: linear-gradient(-45deg, #0c0018, #1a0033, #32005e, #0c0018);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #e5c9ff;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    font-family: poppins;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    background-color: transparent; /* Start transparent */
+    backdrop-filter: none;
+    /* background-color: rgba(255, 255, 255, 0.05); super light base tint */
+    backdrop-filter: blur(10px);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar.scrolled {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0); /* slightly stronger tint */
+}
+
+
+
+@keyframes show-content {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.menu-btn{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  height: 80px;
+  width: 60px;
+  display: none;
+}
+
+
+.navbar .logo{
+    
+    font-weight: 700;
+}
+
+.navbar ul{
+    display: flex;
+    margin-right: 35px;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin-left: 45px;
+}
+
+.navbar ul li a{
+    font-size: 15px;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.navbar ul li:hover a{
+    color: #9524ff;
+}
+
+.navbar ul li.active a{
+    color: #9524ff;
+}
+
+
+.app{
+background: rgba(33, 40, 55, 0.726);
+  backdrop-filter: blur(20px);
+  width: 90%;
+  max-width: 600px;
+  margin-top: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 40px;
+  padding: 30px; 
+  
+}
+
+.app h1{
+  font-size: 25px;
+  color: #f3ccff;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+}
+
+.quiz{
+  padding: 20px 0;
+}
+
+.quiz h2{
+  font-size: 18px;
+  color: #daacff;
+  font-weight: 600;
+}
+
+.btn{
+  background: rgb(24, 0, 44);
+  backdrop-filter: blur(20px);
+  color:#d1b5ff;
+  font-weight: 500;
+  width: 100%;
+  border: 1px rgb(24, 0, 44);
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  left: 0;
+  top: 0;
+  border-radius: 40px;
+}
+
+.btn:hover:not([disabled]){ 
+  color: #fffdfd;
+  font-weight: bold;
+ }
+
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #00ff40, #00ffaa, #0099ff, #0059ff,
+    #00FFD5, #002BFF, #1100ff, #00ff40
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 40px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+.btn:hover::before {
+  opacity: 1;
+  color: #000;
+  font-weight: bold;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #000;
+  font-weight: bold;
+}
+
+.btn:disabled{
+  cursor: no-drop;
+}
+
+#next-btn{
+border-radius:40px;
+font-size: large;
+text-align: center;
+color: #bc79ff;
+width: 100%;
+padding: 10px;
+font-weight: 600;
+margin-top: 30px;
+background: linear-gradient(90deg,#8400f7, #32005e);
+border:none;
+box-shadow: 0 0 20px #9524ff;
+cursor: pointer;
+transition: 0.3s;
+z-index: 2;
+}
+
+#next-btn:hover{
+  background: linear-gradient(90deg,#8400f7, #32005e);
+  backdrop-filter: blur(20px);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.correct{
+  background: linear-gradient(
+    45deg,
+    #00ff40, #00ffaa, #0099ff, #0059ff,
+    #00FFD5, #002BFF, #1100ff, #ae00ff
+  );
+}
+
+.incorrect{
+  background: #ff1d1d;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1; /* keeps game above particles */
+}
+.navbar {
+  z-index: 2; /* keeps nav above everything */
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+.navbar {
+  z-index: 2;
+}
+
+.correct::before{
+  opacity: 1; /* keep glow visible */
+}
+
+.correct {
+  color: #fff;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Responsive*/
+
+@media only screen and (max-width:850px){
+
+  .menu-btn{
+    display: block;
+  }
+
+  .navbar{
+    padding: 0;
+  }
+  .logo{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  .nav-links{
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: #484872;
+    margin-top: -900px;
+    transition: all 0.5s ease;
+  }
+
+  .mobile-menu{
+    margin-top: 0;
+    border-bottom-right-radius: 30%;
+  }
+  .nav-links li{
+    margin: 30px auto;
+  }
+
+
+  .app{
+  margin-bottom: 12rem;
+  }
+}
+
+
+
+@media (max-width: 900px) {
+  .GAMES .row {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .GAMES .row {
+    grid-template-columns: 1fr; /* 1 per row on phones */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-title {
+    font-size: 1.3rem;
+  }
+
+  h6 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .tag p {
+    font-size: 0.8rem;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+  }
+
+  .footer-copy {
+    font-size: 0.7rem;
+  }
+}

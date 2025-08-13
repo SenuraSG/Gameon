@@ -1,0 +1,244 @@
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #0c0018, #1a0033, #32005e, #0c0018);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.menu-btn{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  height: 80px;
+  width: 60px;
+  display: none;
+}
+
+
+a{
+    color: #e5c9ff;
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    font-family: poppins;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    background-color: transparent; /* Start transparent */
+    backdrop-filter: none;
+    /* background-color: rgba(255, 255, 255, 0.05); super light base tint */
+    backdrop-filter: blur(10px);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar.scrolled {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0); /* slightly stronger tint */
+}
+
+
+
+@keyframes show-content {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.navbar .logo{
+    
+    font-weight: 700;
+}
+
+.navbar ul{
+    display: flex;
+    margin-right: 35px;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin-left: 45px;
+}
+
+.navbar ul li a{
+    font-size: 15px;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.navbar ul li:hover a{
+    color: #9524ff;
+}
+
+.navbar ul li.active a{
+    color: #9524ff;
+}
+
+.wrapper {
+  margin-top: 10vmin;
+  width: 68vmin;
+  height: 70vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  background: rgba(0, 14, 39, 0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+}
+.game-details {
+  color: #B8C6DC;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+.play-board {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: rgba(33, 40, 55, 0.3);
+  backdrop-filter: blur(30px);
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+.play-board .food {
+  background: #FF003D;
+}
+.play-board .head {
+  background: #60CBFF;
+}
+
+.controls {
+  display: none;
+  justify-content: space-between;
+}
+.controls i {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #B8C6DC;
+  width: calc(100% / 4);
+  cursor: pointer;
+  border-right: 1px solid #171B26;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .game-details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1; /* keeps game above particles */
+}
+.navbar {
+  z-index: 2; /* keeps nav above everything */
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+.navbar {
+  z-index: 2;
+}
+
+
+@media only screen and (max-width:850px){
+
+  .menu-btn{
+    display: block;
+  }
+
+  .navbar{
+    padding: 0;
+  }
+  .logo{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  .nav-links{
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: #484872;
+    margin-top: -900px;
+    transition: all 0.5s ease;
+  }
+
+  .mobile-menu{
+    margin-top: 0;
+    border-bottom-right-radius: 30%;
+  }
+  .nav-links li{
+    margin: 30px auto;
+  }
+
+}

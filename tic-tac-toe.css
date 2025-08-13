@@ -1,0 +1,220 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #0c0018, #1a0033, #260047, #0c0018);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  overflow: hidden;
+  text-decoration-color: #fff;
+}
+
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+a{
+    color: #e5c9ff;
+    text-decoration: none;
+}
+
+
+.menu-btn{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  height: 80px;
+  width: 60px;
+  display: none;
+}
+
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    font-family: poppins;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    background-color: transparent; /* Start transparent */
+    backdrop-filter: none;
+    /* background-color: rgba(255, 255, 255, 0.05); super light base tint */
+    backdrop-filter: blur(10px);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar.scrolled {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0); /* slightly stronger tint */
+}
+
+
+
+@keyframes show-content {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.navbar .logo{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar ul{
+    display: flex;
+    margin-right: 35px;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a{
+    font-size: 15px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.navbar ul li:hover a{
+    color: #9524ff;
+}
+
+.navbar ul li.active a{
+    color: #9524ff;
+}
+
+
+section {
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+    background: rgba(33, 40, 55, 0.3);
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 10px 36px 16px rgba(226, 84, 255, 0.212);
+    z-index: 1;
+}
+.game--title {
+    padding-top: 20px;
+    color: #ffffff;
+    font-family: poppins;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.game--container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 150px;
+    margin: 120px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.game--status{
+    color: #fff;
+    font-family: poppins;
+    text-transform: uppercase;
+}
+
+.cell {
+    font-family: Poppins;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 0 1px #ffffff;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    line-height: 50px;
+    font-size: 20px;
+}
+button {
+    margin-bottom: 20px;
+    height: 40px;
+    width: 15vw;
+    color: #0c0018;
+    background-color: #9524ff;
+    cursor: pointer;
+    box-shadow: 0 0 20px #9524ff;
+    border: 2px solid #9524ff;
+    border-radius: 40px;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 15px;
+}
+button:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color: #9524ff;
+    
+    
+}
+
+.navbar {
+  z-index: 2; /* keeps nav above everything */
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+
+@media only screen and (max-width:850px){
+
+  .menu-btn{
+    display: block;
+  }
+
+  .navbar{
+    padding: 0;
+  }
+  .logo{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  .nav-links{
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: #484872;
+    margin-top: -900px;
+    transition: all 0.5s ease;
+  }
+
+  .mobile-menu{
+    margin-top: 0;
+    border-bottom-right-radius: 30%;
+  }
+  .nav-links li{
+    margin: 30px auto;
+  }
+
+}

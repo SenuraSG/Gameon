@@ -1,0 +1,297 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(20, 0, 40, 0.7), rgba(20, 0, 40, 0.7)), url(https://images.pexels.com/photos/7862508/pexels-photo-7862508.jpeg)no-repeat center center fixed;
+  background-size: cover;
+  
+}
+
+.container {
+  display: flex;
+  width: 900px;
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.txt{
+  text-transform: uppercase;
+}
+
+.logo{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+/* Left side */
+.left-section {
+  flex: 1;
+  position: relative;
+  background: url('https://images.pexels.com/photos/8721341/pexels-photo-8721341.jpeg') no-repeat center center/cover;
+}
+
+.overlay {
+  background-color: rgba(30, 0, 50, 0.6);
+  color: #fff;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.overlay p {
+  margin: 10px 0;
+}
+
+.overlay .subtext {
+  font-size: 13px;
+  color: #dcdcdc;
+}
+
+.view-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, rgb(3, 226, 255), rgb(132, 0, 255));
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.view-btn:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #2f005a;
+  font-size: 20px;
+}
+
+.right-section {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-section h1 {
+  color: #ffffff;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 0 0 5px;
+
+}
+
+.input1 {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+
+textarea{
+  width: 100%;
+  padding-left: 40px;
+  height: 100px;
+  border-radius: 25px;
+  border: none;
+  padding: 0 20px;
+  font-size: 16px;
+  background-color: #2f005a;
+  color: white;
+}
+textarea::placeholder{
+  color: #c8a6ff;
+  padding-top: 17px;
+  font-family: Poppins,sans-serif;
+}
+
+
+.input1 input {
+  width: 100%;
+  height: 45px;
+  border-radius: 25px;
+  border: none;
+  padding: 0 20px;
+  font-size: 16px;
+  background-color: #2f005a;
+  color: white;
+}
+
+.input1 input::placeholder {
+  color: #c8a6ff;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #03e2ff, #8400ff);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.8s;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: linear-gradient(-90deg, #03e2ff, #8400ff);
+  color: #2f005a;
+  font-size: 20px;
+}
+
+.Registertopic {
+  color: #c8a6ff;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.Registertopic a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Existing styles here ... */
+
+/* Responsive styles */
+@media (max-width: 960px) {
+  body {
+    height: auto; /* Let height adjust */
+  }
+
+  .container {
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .left-section,
+  .right-section {
+    flex: none;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .left-section {
+    min-height: 200px;
+  }
+
+  .overlay {
+    padding: 30px 20px;
+    font-size: 14px;
+  }
+
+  .overlay h2 {
+    font-size: 24px;
+  }
+
+  .right-section {
+    padding: 40px 20px;
+  }
+
+  .right-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .input1 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .input1 input,
+  textarea {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  textarea {
+    height: 80px;
+  }
+
+  .btn {
+    height: 40px;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+  .logo {
+    width: 100px;
+    top: 15px;
+    left: 15px;
+  }
+}
+
+/* Make logo bigger and better positioned on small screens */
+@media (max-width: 960px) {
+  .logo {
+    top: 15px;
+    left: 15px;
+    width: 120px; /* Increase size */
+    position: fixed; /* Keep it visible at top left */
+    z-index: 10;
+  }
+  .logo img {
+    width: 100%; /* Make image fill container */
+    height: auto;
+  }
+}
+
+/* Prevent input fields from overflowing */
+@media (max-width: 960px) {
+  .input1 {
+    width: 90%; /* Full width inside container */
+  }
+
+  .input1 input,
+  textarea {
+    width: 100%; /* Make sure inputs fill their container */
+    box-sizing: border-box; /* Include padding/border in width */
+  }
+
+  .btn{
+    width: 90%;
+    row-gap: 10px;
+  }
+}
+
+/* Also tweak container padding so inputs don’t touch edges */
+@media (max-width: 960px) {
+  .right-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

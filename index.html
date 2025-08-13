@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="NH.css" />
+    <title>GAME ON</title>
+    <link rel="icon" href="logo.png">
+  </head>
+  <body>
+
+    <!--Section 1-->
+
+    <nav class="navbar">
+      <a href="index.html" class="logo"><img src="logoo.png" alt="logo" width="16%" height="16%" ></a>
+      <ul class="nav-links">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="index.html#About">About us</a></li>
+        <li><a href="index.html#Games">Games</a></li>
+        <li><a href="login_new.html">Feedback</a></li>
+         </ul>
+         <img src="menu.png" alt="" class="menu-btn">
+    </nav>
+
+    <header>
+      <div class="header-content">
+        <h3 class="main1">
+          <span style="--i:4" data-text="WHERE GAMERS RESPOWN">WHERE GAMERS RESPOWN</span>
+        </h3>
+        <img src="logoo3.png" alt="logo2" width="70%">
+        <div class="main2container">
+          <p class="main2"><i>Built by five insanely talented university gamers, this site is our playground crafted with passion, late-night coding, and way
+            too much caffeine. We’re here to bring you the ultimate gaming experience, straight from our screens to yours.</i></p>
+        </div>
+      </div>
+    </header>
+
+    <!--Section 2-->
+
+    
+    <section class="GAMES" >
+      <div class="title">
+        <h1 id="Games">GAMES THAT YOU LIKE</h1>
+        <div class="line"></div>
+      </div>
+
+  
+      <div class="row">
+        <div class="col">
+          <img src="snake.jpg" alt="">
+          <h4>SNAKE GAME</h4>
+          <p>
+            The Snake Game is a classic arcade-style game where the player controls a moving snake that grows longer each time it eats food.
+          <button><a href="snake.html" class="ctn1">LET'S PLAY</a></button>
+          </p>
+          
+        </div>
+
+        <div class="col">
+          <img src="quiz.jpg" alt="">
+          <h4>QUIZ GAME</h4>
+          <p>
+            The Quiz Game is an engaging and interactive challenge where players answer questions from a variety of topics such as general knowledge, science, history, sports, and more.
+          <button><a href="QUIZ.html" class="ctn1">LET'S PLAY</a></button>
+          </p>
+          
+        </div>
+
+        <div class="col">
+          <img src="hangman.jpg" alt="">
+          <h4>HANGMAN</h4>
+          <p>
+            Hangman is a word-guessing game that challenges the player to figure out a hidden word, letter by letter, before a stick-figure drawing of a “hanged” character is completed. 
+          <button><a href="hangman.html" class="ctn1">LET'S PLAY</a></button>
+          </p>
+          
+        </div>
+
+        <div class="col">
+          <img src="MC.jpeg" alt="">
+          <h4>MEMORY CARD</h4>
+          <p>
+            Flip cards, find pairs, and test your memory in this brain-boosting challenge. Easy to play, tough to master—every move counts in this mental showdown. 
+            <button><a href="MC.html" class="ctn1">LET'S PLAY</a></button>
+          </p>
+          
+        </div>
+
+        <div class="col">
+          <img src="tic-tac-toe.avif" alt="">
+          <h4>TIC TAC TOE</h4>
+          <p>
+            Tic Tac Toe is a two-player game played on a 3×3 grid. One player uses “X” and the other uses “O”. Players take turns placing their mark in an empty square, with the goal of being the first to get three of their marks in a row — horizontally, vertically, or diagonally.
+           <button><a href="tic-tac-toe.html" class="ctn1">LET'S PLAY</a></button>
+          </p>
+         
+        </div>
+
+        <div class="col">
+          <img src="pacman.jpg" alt="">
+          <h4>PACMAN</h4>
+          <p>
+            Navigate a glowing maze as Pac-Man, dodging ghosts and gobbling dots. With power pellets, you flip the chase and hunt your enemies. It’s fast, strategic, and endlessly iconic.
+            <button><a href="pacman.html" class="ctn1">LET'S PLAY</a></button>
+          </p>
+          
+        </div>
+      </div>
+
+    </section>
+
+    <!--Section 3-->
+
+    <section class="team" id="About">
+      <div class="team_content">
+        <h1>MEET OUR TEAM</h1><p>Behind every great idea is a team of passionate, talented, and creative individuals. Our team brings together diverse skills, fresh ideas, and a shared commitment to making a difference. Get to know the people who work hard every day to turn vision into reality..</p>
+        <button class="ctn"><a href="About_new.html">DISCOVER THE TEAM</a></button>
+      </div>
+    </section>
+
+    <!--Section 4-->
+
+    <section class="footer">
+      <div class="footer-conten">
+        <h2 class="footer-title">🎮 GameOn Arcade🕹️</h2>
+        <p class="tag">
+          Enjoy classic games like Snake, Quiz, Rock Paper Scissors, Tic tac toe - <h3>All in one Place!</h3>
+        </p>
+        <h6 class="des">Uva Wellassa University Of Sri Lanka, Passara Road, Badulla | Tel: 011-132424 | Email: UWU@gmailcom</h6>
+        <p class="footer-copy">&copy; 2025 GameOn Arcade. ALL rights reserved.</p>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        });
+      });
+
+
+
+      const menubtn = document.querySelector('.menu-btn');
+      const navlinks = document.querySelector('.nav-links');
+
+      menubtn.addEventListener('click',()=>{
+            navlinks.classList.toggle('mobile-menu');
+      });
+
+    </script>
+  </body>
+</html>
